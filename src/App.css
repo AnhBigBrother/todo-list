@@ -1,38 +1,156 @@
-.App {
-  text-align: center;
+#App {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: auto;
+    background-color: #5645c2;
+}
+#container {
+    position: relative;
+    height: auto;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #7f74c5;
+    justify-content: flex-start;
+    margin: 10vh 0px 20px 0px;
+    border-radius: 20px;
+}
+#bigTitle {
+    margin: 30px 0px 10px 0px;
+    font-size: 4rem;
+}
+#input {
+    position: relative;
+    width: 80%;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 20px 0px;
+}
+#list{
+    position: relative;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.tagList {
+    margin: 0px 0px 30px 0px;
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 45% 45%;
+    justify-content: center;
+}
+.listButton{
+    position: relative;
+    height: auto;
+    width: auto;
+    display: block;
+    text-align: center;
+    margin: 10px 0px 0px 0px;
+}
+.tag {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 120px;
+    width: auto;
+    background-color: #caceef;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgb(55, 0, 128);
+}
+.tagText {
+    overflow: auto;
+    margin-bottom: 10px;
+}
+.tagIcons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    height: 20px;
+    width: auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+input {
+    position: relative;
+    width: 60%;
+    height: 40px;
+    padding: 0px 10px;
+    border-radius: 8px;
+    background-color: #caceef;
+    margin-right: 20px;
+    border: none;
+}
+input:focus{
+    box-shadow: 0px 0px 18px blue;
+    background-color: white;
+    transition: 0.4s ease-in;
+}
+button {
+    display: inline-block;
+    border: none;
+    border-radius: 50px;
+    height: 100%;
+    background-color: transparent;
+}
+a{
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    margin-bottom: 5vh;
+}
+a:hover{
+    transform: scale(1.3);
+    transition: 0.3s ease-in;
+}
+p{
+    word-break: break-all;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#input>button>svg:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+    transition: 0.3s ease-in;
+}
+.tagIcons>button{
+    margin: 0px 5px;
+}
+.tagIcons>button>svg:hover{
+    transform: scale(1.3);
+    cursor: pointer;
+    transition: 0.3s ease-in;
+}
+.listButton>button{
+    margin: 10px;
+    padding: 0px 15px;
+    height: 40px;
+    background-color: #caceef;
+}
+.listButton>button:hover{
+    filter: brightness(1.3);
+    transition: 0.3s ease-in;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@media only screen and (min-width: 1200px) {
+    #container {
+        width: 60%;
+    }
+    #input{
+        width: 60%;
+    }
+    .tagList {
+        grid-template-columns: 33% 33% 33%;
+    }
 }
