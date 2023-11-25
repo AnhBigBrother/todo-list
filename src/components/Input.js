@@ -21,7 +21,7 @@ const Input = () => {
     useEffect(() => {
         const local = JSON.stringify(list);
         localStorage.setItem('list', local);
-    } , [list])
+    } , [list]);
 
     const changeInput = (text) => {
         dispatch(updateInput(text));

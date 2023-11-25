@@ -115,7 +115,7 @@ const List = () => {
                 <button onClick={() => clickClearCompleted()}>Clear all completed tags</button>
                 <button onClick={() => clickClearAll()}>Clear all</button>
             </div>
-            {displayList.length==0&&<p style={{color: "blue", marginTop: "30px"}}>No task found</p>}
+            {displayList.length===0&&<p style={{color: "blue", marginTop: "30px"}}>No task found</p>}
             <div className="tagList">
                 {showList}
             </div>

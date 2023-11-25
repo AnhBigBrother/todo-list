@@ -1,8 +1,8 @@
-const listReducer = (state = JSON.parse(localStorage.getItem('list')), action) => {
+const listReducer = (state = localStorage.getItem('list') === null ? [] : JSON.parse(localStorage.getItem('list')), action) => {
     switch(action.type){
-        case "updateList" : return action.payload
+        case "updateList" : return action.payload;
+        default: return state;
     }
-    return state;
 }
 
 export default listReducer;
