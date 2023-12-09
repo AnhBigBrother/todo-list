@@ -10,7 +10,7 @@ function App() {
         <Input />
         <List />
       </div>
-      <a href='https://github.com/AnhBigBrother/todo-list' target='_blank'>by Big_Bro</a>
+      <a href='https://github.com/AnhBigBrother/todo-list' target='_blank'>by Tien_Anh_Tran</a>
     </div>
   );
 }
